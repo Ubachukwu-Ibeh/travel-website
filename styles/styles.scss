@@ -1,0 +1,2467 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+//font declarations.
+@font-face {
+    font-family: leaguespartan-bold;
+    src: url(./Fonts/League-spartan/leaguespartan-bold.ttf);
+}
+
+@font-face {
+    font-family: roboto-bold;
+    src: url(./Fonts/roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: roboto-regular;
+    src: url(./Fonts/roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: monserrat-medium;
+    src: url(./Fonts/Monserrat/Montserrat-Medium.otf);
+}
+
+@font-face {
+    font-family: monserrat-bold;
+    src: url(./Fonts/Monserrat/Montserrat-Bold.otf);
+}
+
+@font-face {
+    font-family: monserrat-extrabold;
+    src: url(./Fonts/Monserrat/Montserrat-ExtraBold.otf);
+}
+
+@font-face {
+    font-family: monserrat-semibold;
+    src: url(./Fonts/Monserrat/Montserrat-SemiBold.otf);
+}
+
+@font-face {
+    font-family: monserrat-light;
+    src: url(./Fonts/Monserrat/MontserratAlternates-Light.otf);
+}
+
+@font-face {
+    font-family: opensans-light;
+    src: url(./Fonts/open-sans/OpenSans-Light.ttf);
+}
+
+@font-face {
+    font-family: opensans-bold;
+    src: url(./Fonts/open-sans/OpenSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: opensans-semibold;
+    src: url(./Fonts/open-sans/OpenSans-Semibold.ttf);
+}
+
+//text link style setting.
+
+a {
+    text-decoration: none;
+}
+
+//function declaration for speedy creation of divs.
+
+@mixin ultFunc($width, $height, $m, $fd, $br, $bgc) {
+    width: $width;
+    height: $height;
+    margin: $m;
+    display: flex;
+    flex-direction: $fd;
+    border-radius: $br;
+    background-color: $bgc;
+    overflow: hidden;
+}
+
+//~~~~~~~~~~~~~~~~~~HOME PAGE STARTS~~~~~~~~~~~~~~~~~~~~~~
+
+//Landing page/nav bar BEGINS here.--
+.navbar {
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+}
+
+.landing-page {
+    width: 100%;
+    height: 614px;
+    background-image: url(./TWebAssetExport/landing-image_0000_Layer-5.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+}
+
+//nav bar area-------
+.logo-area {
+    @include ultFunc(100%, 21px, 0px, row, 0px, white);
+}
+
+.logo {
+    margin: auto;
+}
+
+.green-line-area {
+    @include ultFunc(100%, 13px, 0px, row, 0px, #a7d718);
+}
+
+.big-white-func-area {
+    @include ultFunc(100%, 42px, 0px, row, 0px, white);
+    box-shadow: 0px 3px 5px rgba(16, 33, 92, 0.1);
+}
+
+.hamburger {
+    margin: auto;
+    margin-left: 20px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.desktop-logo {
+    margin: auto;
+    margin-left: 50px;
+    margin-right: 150px;
+    display: none;
+}
+//text for navigation bar------
+.home-text {
+    font-family: monserrat-bold;
+    margin: auto;
+    padding: 12px;
+    transition: 0.1s;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #a7d718;
+        color: #fff;
+    }
+
+    display: none;
+}
+
+.nav-text {
+    margin: auto;
+}
+
+.profile {
+    margin: auto 0px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 8px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.more {
+    margin: auto 0px;
+    margin-right: 20px;
+    padding: 5px 10px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+//desktop version landing page---------
+.landing-desktop {
+    width: 100%;
+    height: 614px;
+    display: none;
+}
+
+.begin-journey {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 200px;
+    color: #fff;
+}
+
+.begin-your {
+    font-family: leaguespartan-bold;
+    font-size: 50px;
+    text-shadow: 0px 8px 10px rgba(16, 32, 92, 0.2);
+}
+
+.experience {
+    font-family: opensans-light;
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 0px 3px 5px rgba(16, 32, 92, 0.753);
+}
+
+.sign-up-button {
+    @include ultFunc(150px, 50px, auto, row, 5px, #a7d718);
+    font-family: monserrat-bold;
+    margin-top: 30px;
+    transition: 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        box-shadow: 0px 5px 10px rgba(14, 24, 33, 0.1);
+    }
+}
+
+.sub {
+    margin: auto;
+}
+
+.journey {
+    color: #8fdbff;
+}
+//social media Icons----
+.social-media {
+    position: fixed;
+    z-index: 1;
+    margin: 250px 0px;
+    background-color: rgba(0, 195, 255, 0.335);
+    width: 65px;
+    height: 150px;
+    display: flex;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 3px 3px 8px rgba(35, 144, 233, 0.1);
+    overflow: hidden;
+}
+
+.sm-cont {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-left: 15px;
+}
+
+.sicons {
+    margin: 5px auto;
+    transition: 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+}
+//slide-in menus---
+.slide-in {
+    z-index: 2;
+    position: fixed;
+    @include ultFunc(100%, 530px, 0px, column, 0px, #efefef);
+    margin-left: 70%;
+    margin-top: 70px;
+    border-bottom-left-radius: 60px;
+    box-shadow: 0px 8px 8px rgba(14, 16, 26, 0.2);
+    display: none;
+}
+
+.slide-in2 {
+    @extend .slide-in;
+    height: 430px;
+    z-index: 3;
+}
+
+.slide-in3 {
+    z-index: 4;
+    position: fixed;
+    @include ultFunc(400px, 500px, 0px, column, 0px, #efefef);
+    margin-top: 70px;
+    border-bottom-right-radius: 60px;
+    box-shadow: 0px 8px 8px rgba(14, 16, 26, 0.2);
+    display: none;
+}
+//state changes for slide-ins--------
+#s1-out {
+    display: flex;
+    animation: slide-outr 0.2s ease;
+}
+
+@keyframes slide-outr {
+    0% {
+        margin-left: 70%;
+    }
+
+    100% {
+        margin-left: 100%;
+    }
+}
+
+#s1-in {
+    display: flex;
+    animation: slide-inr 0.3s ease;
+}
+
+@keyframes slide-inr {
+    0% {
+        margin-left: 100%;
+    }
+
+    100% {
+        margin-left: 70%;
+    }
+}
+
+#s3-in {
+    display: flex;
+    animation: slide-in 0.2s ease;
+}
+
+@keyframes slide-in {
+    0% {
+        margin-left: -400px;
+    }
+
+    100% {
+        margin-left: 0px;
+    }
+}
+
+#s3-out {
+    display: flex;
+    animation: slide-out 0.2s ease;
+}
+
+@keyframes slide-out {
+    0% {
+        margin-left: 0px;
+    }
+
+    100% {
+        margin-left: -400px;
+    }
+}
+
+#s3-death {
+    display: none;
+}
+//dark screen-
+.dark-mode {
+    @include ultFunc(100%, 100%, 0px, column, 0px, rgb(14, 24, 33));
+    position: fixed;
+    opacity: 0.5;
+    z-index: 1;
+    margin-left: 0px;
+}
+//state changes for dark screen-------
+#dark-fade-in {
+    display: flex;
+    animation: fade-in 0.1s ease;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+#dark-fade-out {
+    display: flex;
+    animation: fade-out 0.1s ease;
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#reveal-again {
+    display: flex;
+    flex-direction: column;
+    animation: fade-in2 0.2s ease;
+}
+
+@keyframes fade-in2 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#some-margin {
+    margin-top: 200px;
+    animation: show 0.4s ease;
+}
+
+@keyframes show {
+    0% {
+        transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+//profile menu--------
+.profile-text-div {
+    width: inherit;
+    height: 70px;
+    display: flex;
+    font-family: monserrat-bold;
+    color: #0e1821;
+    font-size: 14px;
+}
+
+.protext {
+    margin: auto;
+    margin-left: 60px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.profile-contents {
+    width: inherit;
+    height: 330px;
+    background-color: #f7f7f7;
+    box-shadow: 0px 3px 5px rgba(14, 24, 33, 0.1);
+    padding-top: 6px;
+}
+
+.profile-contents2 {
+    @extend .profile-contents;
+    height: 260px;
+}
+
+.profile-contents3 {
+    @extend .profile-contents;
+    height: 164px;
+}
+
+.pc-textm {
+    @extend .pc-textr;
+}
+//settings menu--
+.settings-text-div {
+    @extend .profile-text-div;
+}
+
+.settings-contents {
+    @extend .profile-contents;
+    height: 150px;
+}
+//social medi menu---
+.follow-div {
+    @extend .profile-text-div;
+}
+
+.follow-content {
+    @extend .profile-contents;
+    height: 100px;
+}
+
+.pc1 {
+    width: 440px;
+    font-family: roboto-regular;
+    color: #0e1821;
+    font-size: 14px;
+    overflow: hidden;
+    transition: 0.05s;
+    display: flex;
+
+}
+
+.pc-icon {
+    margin: auto;
+}
+
+.pc-text {
+    width: 380px;
+    display: flex;
+    height: 30px;
+    overflow: hidden;
+    border-bottom: 2px solid #efefef;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #efefef;
+    }
+}
+
+.pc-textr {
+    @extend .pc-text;
+    border-bottom: none;
+}
+
+.pct {
+    margin-top: 7px;
+}
+//sign-in form-----
+.sign-title {
+    color: #fff;
+    font-family: monserrat-bold;
+    margin: auto;
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.xbox {
+    display: flex;
+    height: 460px;
+    width: 360px;
+    margin: auto;
+    margin-top: 90px;
+    display: none;
+}
+
+.main-x {
+    height: fit-content;
+    width: fit-content;
+    transition: 0.2s;
+    margin-left: 6px;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+//state changes for sign-in--
+#x-slow-fade-in {
+    display: flex;
+    animation: slow-appear 0.2s ease;
+}
+
+@keyframes slow-appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+//sign-in form continues----------------------------
+.sign-up {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 420px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-top: 30px;
+    margin-left: 0px;
+    border-radius: 5px;
+    border: 2px solid #a7d718;
+    box-shadow: 0px 8px 10px rgba(16, 32, 92, 0.2);
+    overflow: hidden;
+}
+
+.signup-text {
+    height: 50px;
+    display: flex;
+}
+
+.signup-box-ult {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: none;
+}
+
+.signup-box {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    width: 230px;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: none;
+    color: #0e1821;
+    outline: none;
+}
+
+.pass {
+    @extend .signup-box-ult;
+    display: flex;
+}
+
+#border {
+    box-shadow: 0px 0px 5px #a7d718;
+}
+
+#no-border {
+    border: none;
+}
+
+.signup-boxp {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: monserrat-medium;
+    font-size: 18px;
+    width: 165px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.eye-cont {
+    display: flex;
+    margin: auto;
+    height: 40px;
+    border-left: 2px solid #ccc;
+    width: 65px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+//green borders for password and email input fields
+#active {
+    border-left: 2px solid #d1eb85;
+}
+
+#not-active {
+    border-left: 2px solid #ccc;
+}
+//sign-in form continues----------------------------
+
+.eye {
+    margin: auto;//password reveal eye
+}
+
+.eye-active {
+    margin: auto;
+    display: none;
+}
+
+.signup-boxg {
+    @extend .signup-box;
+    display: flex;
+    font-family: monserrat-medium;
+    color: #0e1821;
+    font-size: 15px;
+    transition: 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.03);
+        box-shadow: 0px 3px 10px rgba(14, 24, 33, 0.2);
+    }
+}
+//sign-in with google area
+.g,
+.google {
+    margin: auto;
+}
+
+.g {
+    margin-right: 0px;
+}
+
+.signup-boxq {
+    @extend .signup-box;
+    font-family: monserrat-medium;
+    font-size: 18px;
+    background-color: #eeffb9;
+}
+
+.signup-boxa {
+    @extend .signup-box-ult;
+    display: flex;
+    height: 20px;
+    background-color: transparent;
+}
+
+.signup-boxb {
+    @extend .signup-box-ult;
+    display: flex;
+    margin-top: 10px;
+    height: 20px;
+    margin-bottom: 25px;
+    background-color: transparent;
+    border: none;
+}
+
+.newsletter {
+    width: 250px;
+    height: 50px;
+    margin: auto;
+    background-color: #fff;
+    display: none;
+}
+
+.submit {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 50px;
+    background-color: #a7d718;
+    display: flex;
+    color: #fff;
+    font-family: monserrat-bold;
+    border-radius: 5px;
+    transition: 0.2s;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #fff;
+        color: #a7d718;
+    }
+}
+
+#white {
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0px 0px 5px #a7d718;
+
+    &:hover {
+        background-color: #fff;
+    }
+}
+
+#normal {
+    background-color: #a7d718;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #fff;
+        color: #a7d718;
+    }
+}
+
+.load {//load screen icon
+    margin: auto;
+    display: none;
+}
+
+#show {//load screen icon state change and animation
+    display: flex;
+    animation: rotate 2s linear 0s infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+//sign-in button text "sign in"
+.psubmit {
+    margin: auto;
+    font-size: 18px;
+}
+
+#show2 {//sign in text state change
+    display: flex;
+}
+//don't have an account section
+.acc {
+    color: #fff;
+    font-family: monserrat-medium;
+    font-size: 15px;
+    margin: auto;
+}
+
+.sign {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.sign2 {
+    @extend .acc;
+    text-decoration: underline;
+}
+
+#begin-fade {
+    animation: death 0.2s ease;
+}
+
+@keyframes death {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#visible {
+    display: flex;
+    animation: life 0.5s ease;
+}
+
+@keyframes life {
+    0% {
+        opacity: 0;
+        transform: translateY(500px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+#no-margin {
+    margin-top: 0px;
+}
+
+//landing-page ENDS here
+/////////////////////////////////////////////////////////////////////
+//booking form BEGINS here
+.booking-form {
+    @include ultFunc(383px, 442px, auto, column, 10px, #fffde8);
+    margin-top: 100px;
+    border: 2px solid #1fbef8;
+    box-shadow: 5px 10px 15px rgba(16, 32, 92, 0.2);
+}
+
+.where-to {
+    font-family: leaguespartan-bold;
+    font-size: 14px;
+    color: #564f3e;
+    margin: 13px auto 0px;
+}
+
+.search-bar {
+    @include ultFunc(322px, 52px, 10px auto, row, 5px, #fff);
+    border: 2px rgb(212, 212, 212) solid;
+}
+
+.check-area {
+    display: flex;
+    margin: 0px auto;
+}
+
+.check-in {
+    @include ultFunc(153px, 52px, 0px, column, 5px, #fff);
+    border: 2px rgb(212, 212, 212) solid;
+}
+
+.check-out {
+    @include ultFunc(153px, 52px, 0px, column, 5px, #fff);
+    border: 2px rgb(212, 212, 212) solid;
+    margin-left: 10px;
+}
+
+.family-members {
+    display: flex;
+    overflow: hidden;
+    margin: 0px auto;
+}
+
+.adults,
+.children,
+.rooms {
+    @extend .check-in;
+    width: 96.5px;
+    margin-top: 10px;
+}
+
+.adults-with-icon {
+    display: flex;
+}
+
+.adults-count {
+    font-family: monserrat-bold;
+    color: #564f3e;
+    margin-left: 10px;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.children-count {
+    @extend .adults-count;
+}
+
+.room-count {
+    @extend .adults-count;
+}
+
+.children-with-icon {
+    @extend .adults-with-icon;
+}
+
+.room-with-icon {
+    @extend .adults-with-icon;
+}
+
+.adults-text {
+    margin-top: 3px;
+    margin-left: 8px;
+    font-family: monserrat-bold;
+    color: #564f3e;
+    font-size: 11px;
+}
+
+.children {
+    margin-left: 10px;
+}
+
+.children-text {
+    @extend .adults-text;
+}
+
+.rooms {
+    margin-left: 10px;
+}
+
+.crooms-text {
+    @extend .adults-text;
+}
+
+.theicon {
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
+.for-work {
+    @extend .search-bar;
+    margin-top: 30px;
+}
+
+.tick-box {
+    margin: auto;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #bdbdbd;
+    border-radius: 5px;
+    margin-right: 0px;
+    margin-left: 20px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.for-work-text {
+    margin: auto;
+    margin-right: 150px;
+    font-size: 13px;
+    font-family: monserrat-medium;
+    color: #52705c;
+}
+
+.search-button {
+    display: flex;
+    @extend .search-bar;
+    border: 2px #a7d718 solid;
+    background-color: #a7d718;
+    margin-top: 20px;
+    color: #fff;
+    font-family: opensans-semibold;
+    color: #fff;
+    transition: 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        color: #a7d718;
+        background-color: #ffffff;
+    }
+}
+
+.stexto {
+    margin: auto;
+    margin-bottom: 11px;
+}
+
+.search-content {
+    display: flex;
+    margin: auto;
+}
+
+.around {
+    font-family: monserrat-bold;
+    color: #52705c;
+    font-size: 16px;
+    margin: auto;
+    margin-left: 20px;
+    margin-bottom: 8px;
+}
+
+.x {
+    padding: 5px;
+    margin: auto;
+    margin-left: 20px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.cim,
+.com {
+    margin-top: 5px;
+    display: flex;
+}
+
+.cid,
+.cod {
+    font-family: monserrat-semibold;
+    color: #564f3e;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.cidc,
+.codc {
+    margin-left: 5px;
+}
+
+.cind,
+.cond {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.cidand {
+    color: #52705c;
+    font-family: monserrat-semibold;
+    font-size: 12px;
+}
+
+//second booking form for desktop view. *the one that moved down*
+.second-booking-form {
+    overflow: hidden;
+    width: 100%;
+    height: 650px;
+    background-image: url(./TWebAssetExport/Footer-image_0000_Layer-12.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+}
+
+.booking-form2 {
+    @include ultFunc(383px, 442px, auto, column, 10px, #fffde8);
+    margin-top: 100px;
+    border: 2px solid #1fbef8;
+    box-shadow: 5px 10px 15px rgba(16, 32, 92, 0.2);
+}
+
+//Booking form ENDS here.
+///////////////////////////////////////////////////////
+// Dark blue Promises section BEGINS here.
+.dark-blue {
+    @include ultFunc(100%, 615px, 0px, column, 0px, #0e1821);
+}
+
+.ult-a {
+    display: flex;
+    flex-direction: column;
+}
+
+.a {
+    display: flex;
+    flex-direction: column;
+}
+
+.pa {
+    display: flex;
+    flex-direction: column;
+}
+
+.amazing {
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.amazing-destinations {
+    @extend .excellent-service;
+}
+
+.p-amazing {
+    width: 300px;
+    margin: auto;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: opensans-light;
+    font-size: 14px;
+    text-align: center;
+}
+
+.cwot {
+    @extend .amazing;
+}
+
+.connect-with-other-travellers {
+    @extend .excellent-service;
+}
+
+.p-cwot {
+    @extend .p-amazing;
+}
+
+.excellent {
+    @extend .amazing;
+}
+
+.excellent-service {
+    width: fit-content;
+    margin: auto;
+    color: white;
+    font-family: opensans-bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.p-excellent {
+    @extend .p-amazing;
+}
+
+//Dark blue promises section ENDS here
+///////////////////////////////////////////////////////
+//connect with other travellers section BEGINS here.
+.connect-wot {
+    @include ultFunc(100%, 500px, 0px, column, 0px, rgb(255, 255, 255));
+}
+
+.connect-wot-text {
+    font-family: monserrat-extrabold;
+    color: #0e1821;
+    font-size: 20px;
+    width: fit-content;
+}
+
+.ct {
+    width: fit-content;
+    margin-left: 8%;
+    margin-top: 60px;
+    display: flex;
+}
+
+.second-all {
+    display: flex;
+    border: 1px solid #a7d718;
+    border-radius: 520px;
+    width: 100px;
+    height: 30px;
+    color: #a7d718;
+    font-family: monserrat-semibold;
+    display: none;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: #a7d718;
+        color: #fff;
+    }
+}
+
+.ssa {
+    @extend .see-all;
+    display: none;
+}
+
+.travellers {
+    color: #a7d718;
+}
+
+.ult-scroll {
+    margin-top: 5px;
+    width: 100%;
+    height: 350px;
+    overflow: auto;
+    margin-left: 8%;
+}
+
+.wot-scroll-area {
+    display: grid;
+    grid-template-columns: 180px 180px 180px 180px 180px;
+    gap: 10px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.wot1 {
+    height: 300px;
+    width: 180px;
+    margin-top: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgba(31, 61, 170, 0.15);
+    overflow: hidden;
+    transition: 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        transform: translateY(5px);
+    }
+}
+
+.scroll-image {
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.scroll-image1 {
+    @extend .scroll-image;
+    background-image: url(./TWebAssetExport/1scroll-image_0000_Layer-16.jpg);
+}
+
+.scroll-image2 {
+    @extend .scroll-image;
+    background-image: url(./TWebAssetExport/2scroll-image_0000_Layer-17.jpg);
+}
+
+.scroll-image3 {
+    @extend .scroll-image;
+    background-image: url(./TWebAssetExport/3scroll-image_0000_Layer-18.jpg);
+}
+
+.wot2 {
+    display: flex;
+    height: 300px;
+    width: 180px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    overflow: hidden;
+}
+
+.wot-invisible {
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    overflow: hidden;
+}
+
+.seeall {
+    display: flex;
+    border: 1px solid #a7d718;
+    border-radius: 520px;
+    width: 100px;
+    height: 50px;
+    margin: auto;
+    color: #a7d718;
+    font-family: monserrat-semibold;
+    transition: 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #a7d718;
+        color: #fff;
+    }
+}
+
+.see-all {
+    width: fit-content;
+    margin: auto;
+}
+
+.sitext {
+    margin-top: 5px;
+    margin-left: 15px;
+    line-height: 20px;
+}
+
+.travel-talk {
+    font-family: monserrat-bold;
+    font-size: 13px;
+}
+
+.travel-community {
+    font-family: opensans-semibold;
+    font-size: 11px;
+    color: #a7d718;
+}
+
+.traveller-count {
+    font-family: monserrat-bold;
+    font-size: 12px;
+}
+
+//Connect with other travellers section ENDS here
+///////////////////////////////////////////////////////
+//Discover homes section BEGINS here.
+.discover-homes-section {
+    @include ultFunc(100%, 219px, 0px, column, 0px, #424242);
+    background-image: url(./TWebAssetExport/Discover-homes-image_0000_Layer-6.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+}
+
+.endless {
+    margin: auto;
+    margin-top: 70px;
+    color: #fff;
+    font-family: monserrat-bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+.green-home {
+    color: #a7d718;
+}
+
+.discover-homes-link {
+    width: fit-content;
+    //to prevent clicking while not hovering over link
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 71px;
+}
+
+.discover-homes-button {
+    width: 171px;
+    height: 40px;
+    margin-top: 10px;
+    background-color: #a7d718;
+    font-family: monserrat-bold;
+    font-size: 10pt;
+    color: #fff;
+    border-radius: 3px;
+    transition: 0.2s;
+    overflow: hidden;
+
+    &:hover {
+        background-color: #ffffff;
+        color: #a7d718;
+        transform: scale(1.03);
+    }
+}
+
+.discover-homes {
+    width: fit-content;
+    margin: auto;
+    margin-top: 10px;
+}
+
+//Discover homes section ENDS here
+///////////////////////////////////////////////////////
+//Off-Peak-Deals section BEGINS here.
+.off-peak-deals {
+    @include ultFunc(100%, 131px, 0px, row, 0px, #fffde8);
+    margin-top: 100px;
+}
+
+.adimage {
+    background-image: url(./TWebAssetExport/Off-deals-ad-picture_0000_Layer-7.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin: auto;
+    margin-left: 10px;
+    width: 35%;
+    height: 108px;
+    margin-right: 0px;
+}
+
+.dealsdiv {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #0e1821;
+    font-family: monserrat-bold;
+    overflow: hidden;
+}
+
+.green-deals {
+    color: #a7d718;
+}
+
+.off-peak-support {
+    margin-top: 4px;
+    font-family: monserrat-semibold;
+    font-size: 11px;
+    width: 170px;
+}
+
+.discount20 {
+    width: inherit;
+    font-family: monserrat-semibold;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.twenty {
+    font-family: monserrat-bold;
+}
+
+.disc20 {
+    color: #a7d718;
+    font-family: monserrat-bold;
+}
+
+.september {
+    font-family: monserrat-bold;
+}
+
+.october2019 {
+    font-family: monserrat-bold;
+}
+
+.linkdiv {
+    width: fit-content;
+    //to prevent clicking while not hovering over link
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.linkdiv2 {
+    display: none;
+}
+
+.button {
+    width: 162px;
+    height: 41px;
+    margin-top: 11px;
+    border: 2px solid #a7d718;
+    font-family: monserrat-semibold;
+    font-size: 10pt;
+    color: #a7d718;
+    border-radius: 3px;
+    transition: 0.2s;
+    overflow: hidden;
+
+    &:hover {
+        background-color: #a7d718;
+        color: #fff;
+    }
+}
+
+.view-deals {
+    width: fit-content;
+    margin: auto;
+    margin-top: 13px;
+}
+
+//Off-Peak-Deals section ENDS here
+///////////////////////////////////////////////////////
+//Some of Our Favourite Homes section BEGINS here.
+.some-favourite-homes-section {
+    @include ultFunc(100%, 460px, 0px, column, 0px, rgb(255, 255, 255));
+}
+
+.some-favourite-homes {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 90px;
+    font-family: monserrat-bold;
+    font-size: 13px;
+    border-top: 2px rgb(233, 233, 233) solid;
+}
+
+.sfh-text {
+    margin-top: 20px;
+}
+
+.favourite {
+    color: #a7d718;
+}
+
+.fav-scroll-area {
+    height: 385px;
+    margin-left: 20px;
+    overflow: auto;
+}
+
+.fav-content {
+    margin-left: 2px;
+    display: grid;
+    grid-template-columns: 171px 171px 171px 171px 171px 171px;
+    gap: 10px;
+}
+
+.fav1,
+.favx {
+    margin-top: 20px;
+    width: 171px;
+    height: 264px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 8px 5px rgba(31, 61, 170, 0.15);
+    background-color: #fff;
+    transition: 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        transform: translateY(5px);
+    }
+}
+
+.fav-invisible {
+    @extend .wot-invisible;
+}
+
+.fimage {
+    width: 200px;
+    height: 170px;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fimages1 {
+    @extend .fimage;
+    background-image: url(./TWebAssetExport/F-1-IMAGE_0000_Layer-19.png);
+}
+
+.fimages2 {
+    @extend .fimage;
+    background-image: url(./TWebAssetExport/Fimage_0003_Layer-20.png);
+}
+
+.fimages3 {
+    @extend .fimage;
+    background-image: url(./TWebAssetExport/Fimage_0002_Layer-21.png);
+}
+
+.fimages4 {
+    @extend .fimage;
+    background-image: url(./TWebAssetExport/Fimage_0001_Layer-22.png);
+}
+
+.fimages5 {
+    @extend .fimage;
+    background-image: url(./TWebAssetExport/Fimage_0000_Layer-23.png);
+}
+
+.fimage-text-area {
+    color: #0e1821;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
+.rating-area {
+    display: flex;
+}
+
+.lexi-lodge {
+    font-family: monserrat-bold;
+    font-size: 14px;
+}
+
+.lake-tekapo {
+    font-family: monserrat-light;
+    font-size: 10px;
+}
+
+.starsprime {
+    margin-top: 8px;
+}
+
+.reviews {
+    color: #0e1821;
+    font-family: monserrat-semibold;
+    font-size: 11px;
+}
+
+.numberrating {
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 8px;
+    margin-left: 40px;
+    width: 45px;
+    height: 40px;
+    background-color: #1eb3f8;
+    color: #fff;
+    font-family: monserrat-bold;
+    display: flex;
+}
+
+.actual-rating {
+    margin: auto;
+}
+
+//Some of Our Favourite Homes section ENDS here
+///////////////////////////////////////////////////////
+//Big Blue circular check marks section BEGINS here.
+.check-marks {
+    @include ultFunc(100%, 583px, 0px, column, 0px, rgb(255, 255, 255));
+}
+
+.check-mark1 {
+    margin: auto;
+    margin-top: 75px;
+    text-align: center;
+}
+
+.cm1-text {
+    width: 300px;
+    margin: auto;
+    margin-bottom: 5px;
+    color: #0e1821;
+    font-family: monserrat-bold;
+    text-align: center;
+}
+
+.cm1-Stext {
+    margin: auto;
+    color: #0e1821;
+    font-family: monserrat-semibold;
+    font-size: 13px;
+    margin-bottom: 76px;
+}
+
+.check-mark2 {
+    margin: auto;
+}
+
+.cm2-text {
+    @extend .cm1-text;
+}
+
+.cm2-Stext {
+    @extend .cm1-Stext;
+}
+
+//Big Blue circular check marks section ENDS here
+///////////////////////////////////////////////////////
+//Download our app section BEGINS here.
+.download-app {
+    @include ultFunc(100%, 180px, 0px, row, 0px, #1eb3f8);
+}
+
+.app-white-area {
+    @include ultFunc(332px, 137px, auto, row, 30px, #fff);
+    box-shadow: 0px 5px 10px rgba(31, 61, 170, 0.336);
+}
+
+.app-icon {
+    @include ultFunc(84px, 84px, auto, row, 20px, #fff);
+    margin-right: 0px;
+    margin-left: 20px;
+    box-shadow: 0px 3px 5px rgba(31, 61, 170, 0.15);
+}
+
+.app-logo {
+    margin: auto;
+}
+
+.app-download-text {
+    display: flex;
+    flex-direction: column;
+    color: #0e1821;
+    font-family: monserrat-bold;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+.get-free-app {
+    font-size: 15px;
+}
+
+.get-free-app-stext {
+    margin-top: 8px;
+    font-family: monserrat-semibold;
+    font-size: 11px;
+}
+
+.starinstall {
+    display: flex;
+}
+
+.stars {
+    margin: auto;
+    margin-left: 0px;
+}
+
+.install {
+    @include ultFunc(142px, 35px, auto, row, 5px, #a7d718);
+    margin-right: 15px;
+    color: #fff;
+    font-family: monserrat-semibold;
+    font-size: 11px;
+    transition: 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+}
+
+.install-text {
+    margin: auto;
+}
+
+//Download our app section ENDS here
+///////////////////////////////////////////////////////
+//Footer section BEGINS here.
+.footer {
+    background-image: url(./TWebAssetExport/Footer-image_0000_Layer-12.jpg);
+    @include ultFunc(100%, 250px, 0px, column, 0px, #0e1821);
+    margin-top: 102px;
+    padding-top: 25px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    overflow: hidden;
+}
+
+.footer-text-container1 {
+    margin: 10px auto;
+    display: flex;
+    color: #1eb3f8;
+    font-family: opensans-semibold;
+    font-size: 11px;
+    overflow: hidden;
+}
+
+.terms {
+    display: flex;
+    padding: 5px 20px;
+    border-right: 1px solid white;
+
+    p {
+        margin: auto;
+        text-align: center;
+    }
+}
+
+.privacy {
+    @extend .terms;
+}
+
+.about {
+    @extend .terms;
+    border: none;
+}
+
+.footerlogo {
+    color: white;
+}
+
+.footer-text-container2 {
+    @extend .footer-text-container1;
+}
+
+.copyright {
+    @extend .terms;
+    border: none;
+}
+
+.footer-text-container3 {
+    @extend .footer-text-container1;
+}
+
+.reference {
+    @extend .terms;
+    border: none;
+}
+
+.footer-text-container4 {
+    @extend .footer-text-container1;
+}
+
+.sitemap {
+    @extend .terms;
+    border: none;
+}
+
+.footer-text-container5 {
+    @extend .footer-text-container1;
+    color: #fff;
+}
+
+//Footer section ends here
+//~~~~~~~~~~~~~~~~~~~~~~~~END OF HOME PAGE~~~~~~~~~~~~~~~~~~~~~~
+//responsiveness begins
+@media screen and (min-width: 0px) {
+    .booking-form {
+        transform: scale(0.92);
+    }
+
+    .search-button,
+    .search-bar,
+    .check-area,
+    .family-members,
+    .for-work {
+        transform: scale(0.92);
+    }
+
+    .endless {
+        font-size: 20px;
+    }
+
+    @keyframes slide-outr {
+        0% {
+            margin-left: 25%;
+        }
+
+        100% {
+            margin-left: 100%;
+        }
+    }
+
+    @keyframes slide-inr {
+        0% {
+            margin-left: 100%;
+        }
+
+        100% {
+            margin-left: 25%;
+        }
+    }
+
+    .slide-in {
+        margin-left: 25%;
+        border-radius: 0px;
+    }
+
+    .slide-in2 {
+        margin-left: 25%;
+        border-radius: 0px;
+    }
+
+    .slide-in3 {
+        border-radius: 0px;
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 400px) {
+
+    .booking-form,
+    .search-bar,
+    .check-area,
+    .family-members,
+    .for-work {
+        transform: scale(1);
+    }
+
+    .endless {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    @keyframes slide-outr {
+        0% {
+            margin-left: 30%;
+        }
+
+        100% {
+            margin-left: 100%;
+        }
+    }
+
+    @keyframes slide-inr {
+        0% {
+            margin-left: 100%;
+        }
+
+        100% {
+            margin-left: 30%;
+        }
+    }
+
+    .slide-in {
+        margin-left: 30%;
+        border-bottom-left-radius: 60px;
+    }
+
+    .slide-in2 {
+        margin-left: 30%;
+        border-bottom-left-radius: 60px;
+    }
+
+    .slide-in3 {
+        border-bottom-right-radius: 60px;
+        width: 400px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    @keyframes slide-outr {
+        0% {
+            margin-left: 50%;
+        }
+
+        100% {
+            margin-left: 100%;
+        }
+    }
+
+    @keyframes slide-inr {
+        0% {
+            margin-left: 100%;
+        }
+
+        100% {
+            margin-left: 50%;
+        }
+    }
+
+    .slide-in {
+        margin-left: 50%;
+    }
+
+    .slide-in2 {
+        margin-left: 50%;
+    }
+}
+
+@media screen and (min-width: 660px) {
+    .connect-wot {
+        height: 520px;
+    }
+
+    .ult-scroll {
+        width: fit-content;
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    .wot-scroll-area {
+        display: flex;
+    }
+
+    .wot1 {
+        margin: 5px;
+    }
+
+    .wot2 {
+        display: none;
+    }
+
+    .wot-invisible {
+        display: none;
+    }
+
+    .connect-wot-text {
+        margin-top: 5px;
+    }
+
+    .second-all,
+    .ssa {
+        display: flex;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .ct {
+        width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5px;
+        justify-content: space-between;
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+    @keyframes slide-outr {
+        0% {
+            margin-left: 60%;
+        }
+
+        100% {
+            margin-left: 100%;
+        }
+    }
+
+    @keyframes slide-inr {
+        0% {
+            margin-left: 100%;
+        }
+
+        100% {
+            margin-left: 60%;
+        }
+    }
+
+    .slide-in {
+        margin-left: 60%;
+    }
+
+    .slide-in2 {
+        margin-left: 60%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .connect-wot {
+        height: 550px;
+    }
+
+    .ult-scroll {
+        width: fit-content;
+        margin: auto;
+        margin-top: 40px;
+        transform: scale(1.2);
+    }
+
+    .wot-scroll-area {
+        display: flex;
+    }
+
+    .wot1 {
+        margin: 5px;
+    }
+
+    .wot2 {
+        display: none;
+    }
+
+    .wot-invisible {
+        display: none;
+    }
+
+    .connect-wot-text {
+        margin-top: 5px;
+    }
+
+    .second-all,
+    .ssa {
+        display: flex;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .ct {
+        width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5px;
+        justify-content: space-between;
+        transform: scale(1.22);
+    }
+
+    .discover-homes-section {
+        height: 300px;
+        background-position: bottom;
+        background-size: cover;
+    }
+
+    .endless {
+        margin: auto;
+        margin-top: 90px;
+        color: #fff;
+        font-family: monserrat-bold;
+        font-size: 45px;
+        text-align: center;
+    }
+
+    .discover-homes-button {
+        width: 350px;
+        height: 70px;
+        margin-bottom: 60px;
+        background-color: #a7d718;
+        font-family: monserrat-bold;
+        font-size: 14pt;
+        color: #fff;
+        border-radius: 3px;
+        transition: 0.2s;
+        overflow: hidden;
+
+        &:hover {
+            background-color: #ffffff;
+            color: #a7d718;
+        }
+    }
+
+    .discover-homes {
+        width: fit-content;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    .ult-off {
+        width: 100%;
+        margin-top: 100px;
+        height: 500px;
+        overflow: hidden;
+    }
+
+    .off-peak-deals {
+        display: flex;
+        width: 100%;
+        margin: 150px auto;
+        overflow: visible;
+        height: 200px;
+        transform: scale(1.2);
+    }
+
+    .faded1 {
+        opacity: 0.5;
+        background-color: #fffde8;
+        display: flex;
+        width: 20%;
+        height: 200px;
+        background-image: url(./TWebAssetExport/Off-deals-ad-picture_0000_Layer-7.jpg);
+        background-position: right;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-left: auto;
+        margin-left: 0px;
+        display: none;
+    }
+
+    .adimage {
+        margin: unset;
+        background-size: contain;
+        height: 350px;
+        width: 363px;
+        margin-top: -130px;
+        margin-right: 0px;
+    }
+
+    .dealsdiv {
+        margin: unset;
+        display: flex;
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-right: auto;
+    }
+
+    .faded2 {
+        opacity: 0.5;
+        display: flex;
+        width: 25%;
+        height: 200px;
+        background-color: #fffde8;
+        background-image: url(./TWebAssetExport/F-1-IMAGE_0000_Layer-19.png);
+        background-position: left;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: auto;
+        margin-right: 0px;
+        display: none;
+    }
+
+    .off {
+        font-size: 20px;
+    }
+
+    .off-peak-support {
+        font-size: 14px;
+        width: 230px;
+    }
+
+    .discount20 {
+        font-size: 18px;
+        width: 300px;
+    }
+
+    .linkdiv {
+        display: none;
+    }
+
+    .linkdiv2 {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 940px) {
+    .faded1 {
+        display: flex;
+    }
+
+    .discount20 {
+        width: 300px;
+    }
+
+    .fav-scroll-area {
+        width: fit-content;
+        height: fit-content;
+        margin: 20px auto 0px;
+        overflow: visible;
+    }
+
+    .some-favourite-homes {
+        width: 905px;
+        justify-content: space-between;
+        margin: 80px auto 0px;
+    }
+
+    .sfh-text {
+        margin-top: 15px;
+    }
+
+    .fav1,
+    .favx {
+        margin: 0px;
+        margin-left: 10px;
+    }
+
+    .favx {
+        margin-left: 0px;
+    }
+
+    .fav-content {
+        display: flex;
+    }
+
+    .check-marks {
+        transform: scale(1.3);
+        width: fit-content;
+        margin: 100px auto 0px;
+    }
+
+    .download-app {
+        margin-top: 200px;
+        transform: scale(1.5);
+        width: 66.5%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer {
+        margin-top: 300px;
+        transform: scale(1.5);
+        width: 66.5%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .more {
+        margin-right: 30px;
+    }
+
+    .discount20 {
+        width: 350px;
+    }
+
+    .fav-scroll-area {
+        width: fit-content;
+        height: fit-content;
+        margin: 20px auto 0px;
+        transform: scale(1.1);
+        overflow: visible;
+    }
+
+    .some-favourite-homes {
+        width: 905px;
+        justify-content: space-between;
+        transform: scale(1.08);
+        margin: 80px auto 10px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    @keyframes slide-outr {
+        0% {
+            margin-left: 70%;
+        }
+
+        100% {
+            margin-left: 100%;
+        }
+    }
+
+    @keyframes slide-inr {
+        0% {
+            margin-left: 100%;
+        }
+
+        100% {
+            margin-left: 70%;
+        }
+    }
+
+    .slide-in {
+        margin-top: 55px;
+        margin-left: 70%;
+    }
+
+    .slide-in2 {
+        margin-top: 55px;
+        margin-left: 70%;
+    }
+
+    .slide-in3 {
+        margin-top: 55px;
+        display: none;
+    }
+
+    .logo-area {
+        display: none;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .home-text,
+    .desktop-logo {
+        display: flex;
+    }
+
+    .landing-page {
+        background-color: #5f5f5f;
+        background-image: url(./TWebAssetExport/landing-image_0000_Layer-5.jpg);
+        background-blend-mode: soft-light;
+        background-position: 0px -200px;
+    }
+
+    .landing-desktop {
+        display: flex;
+    }
+
+    .dark-blue {
+        height: 120px;
+        display: flex;
+    }
+
+    .booking-form {
+        display: none;
+    }
+
+    .second-booking-form {
+        display: flex;
+    }
+
+    .ult-a,
+    .a {
+        flex-direction: row;
+        margin: auto;
+    }
+
+    .ult-a {
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .amazing-destinations,
+    .connect-with-other-travellers,
+    .excellent-service,
+    .p-amazing,
+    .p-cwot,
+    .p-excellent {
+        text-align: left;
+        margin: auto;
+        font-size: 13px;
+        width: 250px;
+    }
+
+    .ult-off {
+        background-image: url(./TWebAssetExport/LEAVES_0000_Layer-22.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .off-peak-deals {
+        transform: scale(1.2);
+    }
+
+    .adimage {
+        margin-top: -130px;
+    }
+
+    .discount20 {
+        width: 300px;
+    }
+
+    .faded2 {
+        display: flex;
+    }
+
+    .pa {
+        margin-left: 20px;
+    }
+
+    .amazing {
+        margin: auto;
+        width: 50px;
+        height: 50px;
+    }
+
+    .cwot {
+        margin: auto;
+        width: 50px;
+        height: 50px;
+    }
+
+    .excellent {
+        margin: auto;
+        width: 40px;
+        height: 40px;
+    }
+
+    .p-excellent {
+        margin-bottom: 20px;
+    }
+
+    .amazing-destinations,
+    .connect-with-other-travellers,
+    .excellent-service {
+        margin-bottom: 5px;
+    }
+
+    .some-favourite-homes-section {
+        overflow: visible;
+    }
+
+    .some-favourite-homes {
+        transform: scale(1.19);
+        width: 905px;
+        justify-content: space-between;
+        margin: 80px auto 20px;
+    }
+
+    .fav-scroll-area {
+        transform: scale(1.2);
+        width: fit-content;
+        height: fit-content;
+        margin: 30px auto 0px;
+        overflow: visible;
+    }
+
+    .fav1,
+    .favx {
+        margin: 0px;
+        margin-left: 10px;
+    }
+
+    .favx {
+        margin-left: 0px;
+    }
+
+    .fav-content {
+        display: flex;
+    }
+
+    .check-marks {
+        transform: scale(1.3);
+        width: fit-content;
+        margin: 150px auto 0px;
+    }
+
+    .download-app {
+        margin-top: 200px;
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .discount20 {
+        font-size: 18px;
+        width: 350px;
+    }
+}
